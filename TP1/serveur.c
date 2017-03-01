@@ -50,10 +50,9 @@ int main(){
 			printf("Valeur de accept serveur = %d\n", acc);
 		}
 		
-		read(acc, mess, 20);
-		sleep(5);
-		printf("Message recu : %s\n", mess);
-		
+		recv(sock , mess, 200,0);
+		puts(mess);
+		sleep(5);		
 		
 	}
 		

@@ -38,7 +38,7 @@ int main(){
 	
 	conn = connect(sock, (struct sockaddr *) &addr_srv, sizeof(addr_srv));
 	printf("Client connecté? : %d\n", conn);
-	write(conn, mess, strlen(mess)+1);
+	send(sock , mess, 150,0);
 	sleep(5);
 	
 
